@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Success - Growmore Algo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;margin:0;display:flex;justify-content:center;min-height:100vh}
+.container{max-width:440px;width:92%;padding:32px 16px;text-align:center}
+.card{background:#121212;border:1px solid #222;border-radius:18px;padding:24px;margin-top:20px;text-align:left}
+.btn{width:100%;padding:15px;border-radius:12px;font-weight:800;font-size:15px;margin-top:14px;cursor:pointer;display:block;text-align:center;text-decoration:none;box-sizing:border-box}
+.btn-pro{background:linear-gradient(135deg,#facc15,#f59e0b);color:#000}
+.btn-tg{background:#229ED9;color:#fff}
+.success-icon{width:64px;height:64px;background:#052e16;border:1px solid #14532d;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 16px}
+.small{font-size:11px;color:#777;margin-top:12px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="success-icon">✅</div>
+<h1 style="font-size:24px;font-weight:800;margin:0">Payment Successful!</h1>
+<p style="color:#999;font-size:14px;margin:10px 0 0;line-height:1.6">Welcome to Full DIY Kit + PRO Indicator family</p>
+
+<div class="card">
+<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+<div><div style="font-size:11px;color:#666;">FULL DIY KIT</div><div style="font-size:14px;font-weight:800;color:#fff;margin-top:2px;">1 Year Access</div></div>
+<div style="text-align:right"><div style="font-size:11px;color:#666;">PRO INDICATOR</div><div style="font-size:14px;font-weight:800;color:#facc15;margin-top:2px;">3 Months</div></div>
+</div>
+
+<div style="background:#0e0e0e;border:1px dashed #333;border-radius:10px;padding:12px;margin-top:14px;">
+<div style="font-size:11px;color:#666;">YOUR LICENSE WILL BE</div>
+<div style="font-size:13px;color:#fff;font-weight:600;margin-top:4px;" id="userName">Name: Loading...</div>
+<div style="font-size:12px;color:#999;margin-top:2px;" id="expiryInfo">Indicator Expiry: 3 Months | Kit: 1 Year</div>
+</div>
+
+<button class="btn btn-pro" onclick="downloadFromSuccess()">⬇️ Download PRO License + Indicator</button>
+<a href="https://t.me/+Nj9RRZFA65c0ZTA1" target="_blank" class="btn btn-tg">📘 Join Private Channel - Full Kit Pinned</a>
+
+<div style="background:#1a1500;border:1px solid #3a2e00;border-radius:10px;padding:12px;margin-top:14px;">
+<div style="font-size:12px;color:#e5c85a;font-weight:700;">⚠️ IMPORTANT - SAVE THIS</div>
+<div style="font-size:11px;color:#999;margin-top:6px;line-height:1.6">1. Download License + Indicator above<br>2. Join Telegram channel - Full PDF Kit is in Pinned Message<br>3. Keep Transaction ID safe for support</div>
+</div>
+</div>
+
+<p class="small">Need help? WhatsApp: +91 7738272732<br>© Growmore Algo</p>
+</div>
+
+<script>
+// Load name from localStorage (saved from diy page)
+let name = localStorage.getItem('mt5name') || "Trader";
+document.getElementById('userName').innerText = "Name: " + name;
+
+let now = new Date();
+let indicatorExpiry = new Date(); indicatorExpiry.setMonth(indicatorExpiry.getMonth() + 3);
+let i_str = `${String(indicatorExpiry.getDate()).padStart(2,'0')}/${String(indicatorExpiry.getMonth()+1).padStart(2,'0')}/${indicatorExpiry.getFullYear()}`;
+let kitExpiry = new Date(); kitExpiry.setFullYear(kitExpiry.getFullYear() + 1);
+let k_str = `${String(kitExpiry.getDate()).padStart(2,'0')}/${String(kitExpiry.getMonth()+1).padStart(2,'0')}/${kitExpiry.getFullYear()}`;
+document.getElementById('expiryInfo').innerText = `Indicator: ${i_str} (3M) | Kit: ${k_str} (1Y)`;
+
+function downloadFromSuccess(){
+  let content = `Name=${name}\r\nProduct=Dashboard23 PRO + Full DIY Kit\r\nIndicator_Expiry=${i_str} (3 Months)\r\nDIY_Kit_Expiry=${k_str} (1 Year)\r\nExpiry=${i_str}\r\nType=PAID_1YEAR_KIT_3MONTH_INDICATOR\r\nPayment_Status=VERIFIED\r\n`;
+  let blob = new Blob([content], {type:'text/plain'}); let url = URL.createObjectURL(blob);
+  let a = document.createElement('a'); a.href=url; a.download='License_PRO_1YearKit_3MonthIndicator.txt'; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>{ let b = document.createElement('a'); b.href='https://growmorealgo.netlify.app/Downloads/DASHBOARD23.ex5'; b.download='DASHBOARD23_PRO_3MONTHS.ex5'; document.body.appendChild(b); b.click(); b.remove(); }, 800);
+}
+</script>
+</body>
+</html>

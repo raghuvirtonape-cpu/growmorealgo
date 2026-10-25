@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrowmoreAlgo - Free 3 Days Trial</title>
+<style>
+body{font-family:Arial,sans-serif;background:#0f172a;color:#fff;display:flex;justify-content:center;align-items:center;min-height:100vh;margin:0;padding:20px}
+.card{background:#1e293b;padding:25px;border-radius:15px;width:100%;max-width:380px;box-shadow:0 10px 30px rgba(0,0,0,0.5);text-align:center}
+h2{margin:0 0 10px;color:#38bdf8}
+p{color:#94a3b8;font-size:14px;margin-bottom:20px}
+input{width:100%;padding:14px;margin:8px 0;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff;font-size:16px;box-sizing:border-box}
+button{width:100%;padding:14px;margin-top:15px;border-radius:10px;border:0;background:#38bdf8;color:#000;font-weight:bold;font-size:17px;cursor:pointer}
+button:active{transform:scale(0.98)}
+.small{font-size:12px;color:#64748b;margin-top:12px}
+.small a{color:#38bdf8;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>GrowmoreAlgo</h2>
+<p>Get Your FREE 3 Days Trial Key For SK Index Indicator</p>
+<input type="text" id="name" placeholder="Aapka Naam" required>
+<input type="tel" id="phone" placeholder="WhatsApp Number" required>
+<button onclick="getKey()">FREE Key Le - Telegram Pe</button>
+<div class="small">Click karte hi aap <a href="https://t.me/Havekey_bot"> @Havekey_bot </a> pe chale jaoge<br>Indicator: <a href="https://t.me/growmorealgo">t.me/growmorealgo</a></div>
+</div>
+<script>
+function getKey(){
+let name=document.getElementById('name').value.trim();
+let phone=document.getElementById('phone').value.trim();
+if(!name || !phone){alert("Naam aur WhatsApp Number dalo");return;}
+let url="https://script.google.com/macros/s/AKfycbyYZZ4fH0CRdjqyYYw_7o-OY7A__UXFrSYs503819JuwAdNn2u_V189q0vYj_Z9xnbenQ/exec";
+fetch(url,{method:"POST",mode:"no-cors",body:new URLSearchParams({text:name,chat_id:"website_"+phone,phone:phone})});
+setTimeout(()=>{window.location.href="https://t.me/Havekey_bot?start="+encodeURIComponent(name);},800);
+}
+</script>
+</body>
+</html>
