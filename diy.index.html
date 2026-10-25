@@ -2,105 +2,40 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Non-Coder to EA Expert - Full Access</title>
+<title>GrowmoreAlgo - DIY Algo Kit</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:'Inter',system-ui,sans-serif;background:#0a0a0a;color:#fff;margin:0;display:flex;justify-content:center;min-height:100vh}
-.container{max-width:440px;width:92%;padding:28px 16px}
-.badge{background:#111;border:1px solid #222;padding:7px 14px;border-radius:20px;font-size:11px;color:#aaa;display:inline-block;margin-bottom:18px}
-h1{font-size:26px;font-weight:800;margin:0 0 10px;line-height:1.15}
-.sub{color:#999;font-size:13.5px;line-height:1.6;margin-bottom:18px}
-.card{background:#121212;border:1px solid #222;border-radius:18px;padding:22px;margin-bottom:16px}
-label{font-size:11px;color:#aaa;margin:14px 0 6px;display:block;letter-spacing:0.5px;text-transform:uppercase}
-input,select{width:100%;padding:14px 12px;border-radius:12px;border:1px solid #2a2a2a;background:#0e0e0e;color:#fff;font-size:15px;box-sizing:border-box;outline:none}
-input:focus,select:focus{border-color:#facc15}
-.btn{width:100%;padding:15px;background:#fff;color:#000;border:none;border-radius:12px;font-weight:800;font-size:15px;margin-top:20px;cursor:pointer}
-.btn-dark{background:#1a1a1a;color:#fff;border:1px solid #333}
-.btn-pro{background:linear-gradient(135deg,#facc15,#f59e0b);color:#000;font-weight:800}
-.step2,.step3{display:none}
-.tg-btn{display:block;width:100%;padding:15px;background:#229ED9;color:#fff;text-align:center;border-radius:12px;text-decoration:none;font-weight:700;margin-top:14px}
-.pay-btn{display:block;width:100%;padding:15px;text-align:center;border-radius:12px;text-decoration:none;font-weight:800;margin-top:12px;font-size:15px}
-.small{font-size:11.5px;color:#777;margin-top:12px;line-height:1.6;text-align:center}
-.warn{background:#1a1500;border:1px solid #3a2e00;color:#e5c85a;padding:12px;border-radius:10px;font-size:12px;margin-top:14px;line-height:1.5}
-.verify-ok{background:#052e16;border:1px solid #14532d;color:#86efac;padding:12px;border-radius:10px;font-size:12px;margin-bottom:14px}
-.pro-box{background:#0f0f0f;border:1px solid #facc15;border-radius:14px;padding:16px;margin-top:14px}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;margin:0;padding:20px;display:flex;justify-content:center}
+.container{max-width:440px;width:100%}
+.card{background:#121212;border:1px solid #222;border-radius:12px;padding:24px;text-align:center}
+.price{font-size:32px;font-weight:800;margin:16px 0}
+button{width:100%;padding:16px;border-radius:8px;background:#fff;color:#000;font-weight:800;border:none;cursor:pointer;font-size:16px}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="badge">🔓 Lifetime Updates • Secure Payment</div>
-<h1>Non-Coder to EA Expert</h1>
-<p class="sub">Full DIY Kit + PRO Indicator. No coding needed.</p>
-<div class="card" id="step1">
-<label>Full Name (Same as MT5)</label><input id="name" placeholder="Ex: John Smith">
-<label>WhatsApp Number</label><input id="whatsapp" type="tel" placeholder="Ex: +91 98765 43210">
-<input type="hidden" id="country" value="India">
-<button class="btn" id="submitBtn" onclick="handleSubmit()">Get Full Access →</button>
-<p class="small">✅ Secure Payment • Telegram Access • 1 Year DIY Kit + 3 Months PRO</p>
-</div>
-<div class="card step2" id="step2">
-<h2 style="margin:0 0 6px;font-size:20px;font-weight:800">Welcome, <span id="uname"></span>!</h2>
-<p class="sub" style="margin-bottom:16px">You are one step away from full access.</p>
-<a id="payBtn" href="#" target="_blank" class="pay-btn" style="background:#fff;color:#000;">Continue to Secure Payment →</a>
-<div class="warn">🔒 After payment, save your Transaction ID. Needed for verification.</div>
-<button class="btn btn-dark" onclick="goToVerify()">I Have Completed Payment →</button>
-</div>
-<div class="card step3" id="step3">
-<h2 style="margin:0 0 4px;font-size:20px;font-weight:800">Verify Payment</h2>
-<p class="sub" style="margin-bottom:18px">Enter details to unlock.</p>
-<label>Payment Method</label><select id="payMethod"><option value="">Select Method</option><option value="Razorpay">Razorpay (India)</option><option value="PayPal">PayPal (International)</option></select>
-<label>Transaction ID / Payment ID</label><input id="txn" placeholder="Ex: pay_xxxxxxxx">
-<label>Telegram Username</label><input id="tg2" placeholder="Ex: @johnsmith">
-<button class="btn" id="verifyBtn" onclick="verifyPayment()">Verify & Unlock Access →</button>
-<p class="small" id="verifyNote"></p>
-<div id="finalBox" style="display:none">
-  <div class="verify-ok"><div style="font-weight:700;">✅ Payment Recorded</div><div style="margin-top:4px;color:#a7f3d0;">Txn: <span id="showTxn" style="color:#fff;font-weight:600"></span> • Verification in 2-6 hrs</div></div>
-  <div class="pro-box"><div style="font-size:13px;font-weight:800;color:#facc15;">🎁 PAID INCLUDES</div><div style="font-size:12px;color:#999;margin-top:8px;line-height:1.6;">✅ Full DIY Kit = <b style="color:#fff;">1 Year Access</b><br>✅ Dashboard23 PRO = <b style="color:#facc15;">3 Months</b></div><button class="btn btn-pro" onclick="downloadProBundle()">⬇️ Download PRO License + Indicator</button></div>
-  <a href="https://t.me/+Nj9RRZFA65c0ZTA1" target="_blank" class="tg-btn">📘 Join Private Channel - Full Kit Pinned</a>
+<div class="card">
+<h1>DIY Algo Trading Kit</h1>
+<p>Build & Deploy Your Own Algos</p>
+<div class="price">₹1,999</div>
+<button onclick="payNow('diy_kit')">Buy DIY Kit - Secure</button>
 </div>
 </div>
-</div>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
-let realCountryCode=null; let currentName="", currentPhone="";
-fetch('https://ipapi.co/json/').then(r=>r.json()).then(d=>{ realCountryCode=d.country_code; document.getElementById('country').value = d.country_name || 'India'; }).catch(()=>{});
-
-async function handleSubmit(){
- const n=document.getElementById('name').value.trim(); const w=document.getElementById('whatsapp').value.trim(); const countryVal=document.getElementById('country').value;
- if(n.length < 3){alert('Enter full name');return} if(w.length < 8){alert('Enter valid WhatsApp');return}
- currentName=n; currentPhone=w; localStorage.setItem('mt5name', n);
- document.getElementById('submitBtn').innerText='Processing...';
- try{
-   await fetch('/api/save-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ sheetName:"PAID_LEADS", name:n, phone:w, country:countryVal, type:"PAID INITIATED", stage:"step1_initiated", timestamp:new Date().toISOString(), ip_country:realCountryCode })});
- }catch(e){}
- document.getElementById('uname').innerText=n; document.getElementById('step1').style.display='none'; document.getElementById('step2').style.display='block';
- const payBtn = document.getElementById('payBtn');
- // Backend should give link - for now static but hidden server side
- if(realCountryCode && realCountryCode!=='IN'){ payBtn.href="https://www.paypal.com/ncp/payment/QWYC..."; payBtn.style.background="#ffc439"; payBtn.innerText="Continue to Secure Payment → PayPal"; } else { payBtn.href="https://rzp.io/rzp/e4Gi712J"; }
-}
-
-function goToVerify(){document.getElementById('step2').style.display='none';document.getElementById('step3').style.display='block';}
-
-async function verifyPayment(){
- const m=document.getElementById('payMethod').value; const t=document.getElementById('txn').value.trim(); const tg=document.getElementById('tg2').value.trim(); const countryVal=document.getElementById('country').value;
- if(!m){alert('Select payment method');return} if(t.length < 6){alert('Enter valid Transaction ID');return} if(!tg){alert('Enter Telegram username');return}
- document.getElementById('verifyBtn').innerText='Verifying...';
- try{
-   await fetch('/api/save-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ sheetName:"PAID_LEADS", name:currentName, phone:currentPhone, country:countryVal, type:"PAYMENT SUBMITTED", payMethod:m, txnId:t, telegram:tg, stage:"payment_submitted", timestamp:new Date().toISOString() })});
- }catch(e){}
- document.getElementById('showTxn').innerText=t; document.getElementById('finalBox').style.display='block';
- document.getElementById('verifyBtn').innerText='Verify & Unlock Access →';
- window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
-}
-
-async function downloadProBundle(){
-  try{
-    let res = await fetch('/api/generate-pro-license',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:currentName, txn:document.getElementById('txn').value, telegram:document.getElementById('tg2').value})});
-    if(!res.ok) throw new Error('fail');
-    let blob = await res.blob();
-    let url = URL.createObjectURL(blob);
-    let a = document.createElement('a'); a.href=url; a.download='License_PRO.txt'; document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(()=>{ let b = document.createElement('a'); b.href='/Downloads/DASHBOARD23_v2.3.ex5'; b.download='DASHBOARD23_PRO.ex5'; document.body.appendChild(b); b.click(); b.remove(); }, 1000);
-  }catch(e){ alert('Verification needed. Contact support with Txn ID.'); }
+function payNow(product){
+ const options={
+  key: "rzp_live_YOUR_KEY_HERE",
+  amount: 199900,
+  currency: "INR",
+  name: "GrowmoreAlgo",
+  description: product,
+  handler: function(response){
+    window.location.href = "/success.html?txn="+response.razorpay_payment_id+"&product="+product;
+  },
+  theme:{color:"#ffffff"}
+ };
+ const rzp=new Razorpay(options); rzp.open();
 }
 </script>
 </body>
