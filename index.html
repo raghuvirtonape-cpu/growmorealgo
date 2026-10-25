@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GrowmoreAlgo - Free 3 Days Trial</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
@@ -11,6 +12,8 @@ body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;margin:0;paddi
 input{width:100%;padding:14px;border-radius:8px;border:1px solid #333;background:#1a1a1a;color:#fff;margin:8px 0;box-sizing:border-box}
 button{width:100%;padding:14px;border-radius:8px;background:#fff;color:#000;font-weight:800;border:none;cursor:pointer;margin-top:12px}
 .msg{margin-top:12px;font-size:14px}
+footer a{color:#888;text-decoration:none;margin:0 8px}
+footer a:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -25,27 +28,38 @@ button{width:100%;padding:14px;border-radius:8px;background:#fff;color:#000;font
 <div id="msg" class="msg"></div>
 </div>
 </div>
+
+<footer style="text-align:center; padding:24px; background:#121212; margin-top:50px; border-top:1px solid #222; font-size:13px; color:#888">
+<a href="/privacy-policy.html">Privacy Policy</a> | 
+<a href="/terms-and-conditions.html">Terms & Conditions</a> | 
+<a href="/refund-policy.html">Refund Policy</a> | 
+<a href="/contact-us.html">Contact Us</a>
+<p style="margin-top:12px">© 2026 GrowMoreAlgo - Algo Solutions, Software Development</p>
+<p>Raghuvir | Virar, Palghar, Maharashtra - 401305</p>
+<p>Email: raghuvirtonape@gmail.com | Phone: +91 7738272732</p>
+</footer>
+
 <script>
 let lastSubmit = 0;
 async function submitLead(){
- const name=document.getElementById('name').value.trim();
- const phone=document.getElementById('phone').value.trim();
- const tv=document.getElementById('tv').value.trim();
- const msgEl=document.getElementById('msg');
- if(Date.now()-lastSubmit < 10000){ msgEl.textContent="Please wait 10 sec"; return; }
- if(!/^[6-9]\d{9}$/.test(phone)){ msgEl.textContent="Enter valid 10 digit mobile number"; return; }
- if(name.length<3 || tv.length<3){ msgEl.textContent="Fill all fields correctly"; return; }
- lastSubmit=Date.now();
- document.getElementById('btn').textContent="Processing...";
- document.getElementById('btn').disabled=true;
- try{
-   const res=await fetch('/api/save-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,phone,tradingview:tv,source:'free_trial'})});
-   const data=await res.json();
-   if(data.success){ msgEl.textContent="✅ Trial activated! Check TradingView in 10 mins."; msgEl.style.color="#00ff88"; }
-   else{ msgEl.textContent=data.error||"Failed, try again"; }
- }catch(e){ msgEl.textContent="Network error, try again"; }
- document.getElementById('btn').textContent="Activate Trial Now";
- document.getElementById('btn').disabled=false;
+const name=document.getElementById('name').value.trim();
+const phone=document.getElementById('phone').value.trim();
+const tv=document.getElementById('tv').value.trim();
+const msgEl=document.getElementById('msg');
+if(Date.now()-lastSubmit < 10000){ msgEl.textContent="Please wait 10 sec"; return; }
+if(!/^[6-9]\d{9}$/.test(phone)){ msgEl.textContent="Enter valid 10 digit mobile number"; return; }
+if(name.length<3 || tv.length<3){ msgEl.textContent="Fill all fields correctly"; return; }
+lastSubmit=Date.now();
+document.getElementById('btn').textContent="Processing...";
+document.getElementById('btn').disabled=true;
+try{
+const res=await fetch('/api/save-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,phone,tradingview:tv,source:'free_trial'})});
+const data=await res.json();
+if(data.success){ msgEl.textContent="✅ Trial activated! Check TradingView in 10 mins."; msgEl.style.color="#00ff88"; }
+else{ msgEl.textContent=data.error||"Failed, try again"; }
+}catch(e){ msgEl.textContent="Network error, try again"; }
+document.getElementById('btn').textContent="Activate Trial Now";
+document.getElementById('btn').disabled=false;
 }
 </script>
 </body>
