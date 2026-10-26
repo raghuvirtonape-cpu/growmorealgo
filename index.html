@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GrowmoreAlgo - Free 3 Days Trial</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;margin:0;padding:0}
-.container{max-width:440px;margin:0 auto;padding:20px}
-.card{background:#121212;border:1px solid #222;border-radius:12px;padding:24px}
-input{width:100%;padding:14px;border-radius:8px;border:1px solid #333;background:#1a1a1a;color:#fff;margin:8px 0;box-sizing:border-box}
-button{width:100%;padding:14px;border-radius:8px;background:#fff;color:#000;font-weight:800;border:none;cursor:pointer;margin-top:12px}
-.msg{margin-top:12px;font-size:14px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowmoreAlgo - Algo Solutions & Free Trial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff}
+  </style>
 </head>
 <body>
-<div class="container">
-<div class="card">
-<h2>Start Free 3 Days Trial</h2>
-<p>Enter details to activate trial on TradingView</p>
-<input id="name" placeholder="Full Name">
-<input id="phone" placeholder="10 Digit Mobile Number" maxlength="10">
-<input id="tv" placeholder="TradingView Username">
-<button id="btn" onclick="submitLead()">Activate Trial Now</button>
-<div id="msg" class="msg"></div>
-</div>
-</div>
+  <!-- NAV -->
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="font-extrabold text-xl">GrowmoreAlgo</div>
+    <a href="#trial" class="bg-white text-black px-4 py-2 rounded-lg font-bold text-sm">Free Trial</a>
+  </nav>
 
-<div style="text-align:center;padding:20px;color:#666;font-size:12px;line-height:1.6">
-Disclaimer: Automated trading software. No profit guarantee. Trading involves risk. 7 Days FREE trial to evaluate. Growmore Algo is software studio, not SEBI advisory. | New Operational Update 2026: License system now skips weekends & auto-validates MT5 name.
-</div>
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-6 py-16 text-center">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Your Smart Servant Trades.<br><span class="text-zinc-400">You Rest.</span></h1>
+    <p class="text-zinc-400 mt-6 max-w-2xl mx-auto">We build automated trading systems for TradingView, MT5 & more.</p>
+    <div class="mt-8 flex gap-4 justify-center">
+      <a href="#trial" class="bg-white text-black px-6 py-3 rounded-lg font-bold">Start Free Trial</a>
+      <a href="https://wa.me/917738272732" target="_blank" class="border border-zinc-700 px-6 py-3 rounded-lg font-semibold">WhatsApp Us</a>
+    </div>
+  </section>
 
-<footer style="text-align:center; padding:30px 15px; background:#111; border-top:1px solid #222; font-size:13px; color:#888">
-<div style="margin-bottom:12px">
-<a href="/privacy-policy.html" style="color:#888;text-decoration:none;margin:0 8px">Privacy Policy</a> |
-<a href="/terms-and-conditions.html" style="color:#888;text-decoration:none;margin:0 8px">Terms & Conditions</a> |
-<a href="/refund-policy.html" style="color:#888;text-decoration:none;margin:0 8px">Refund Policy</a> |
-<a href="/contact-us.html" style="color:#888;text-decoration:none;margin:0 8px">Contact Us</a>
-</div>
-<p>© 2026 GrowMoreAlgo - Algo Solutions, Software Development</p>
-<p>Raghuvir | Virar, Palghar, Maharashtra - 401305</p>
-<p>Email: raghuvirtonape@gmail.com | Phone: +91 7738272732</p>
-</footer>
+  <!-- 6 SERVICES -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-8 text-center">Our 6 Core Services</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">1. Algo Development</h3><p class="text-sm text-zinc-400 mt-2">Custom strategies as per your logic</p></div>
+      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">2. TradingView Automation</h3><p class="text-sm text-zinc-400 mt-2">Fully automated alerts to broker</p></div>
+      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">3. MT5 EA & Indicators</h3><p class="text-sm text-zinc-400 mt-2">Expert Advisors, license system</p></div>
+      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">4. Dashboard23 Rental</h3><p class="text-sm text-zinc-400 mt-2">Premium dashboard with weekend skip</p></div>
+      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">5. Strategy Backtesting</h3><p class="text-sm text-zinc-400 mt-2">Deep backtest & optimization</p></div>
+      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">6. Broker Integration</h3><p class="text-sm text-zinc-400 mt-2">Zerodha, Angel, Dhan auto execution</p></div>
+    </div>
+  </section>
 
-<script>
-let lastSubmit = 0;
-async function submitLead(){
-const name=document.getElementById('name').value.trim();
-const phone=document.getElementById('phone').value.trim();
-const tv=document.getElementById('tv').value.trim();
-const msgEl=document.getElementById('msg');
-if(Date.now()-lastSubmit < 10000){ msgEl.textContent="Please wait 10 sec"; return; }
-if(!/^[6-9]\d{9}$/.test(phone)){ msgEl.textContent="Enter valid 10 digit mobile number"; return; }
-if(name.length<3 || tv.length<3){ msgEl.textContent="Fill all fields correctly"; return; }
-lastSubmit=Date.now();
-document.getElementById('btn').textContent="Processing...";
-document.getElementById('btn').disabled=true;
-try{
-const res=await fetch('/api/save-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,phone,tradingview:tv,source:'free_trial'})});
-const data=await res.json();
-if(data.success){ msgEl.textContent="✅ Trial activated! Check TradingView in 10 mins."; msgEl.style.color="#00ff88"; }
-else{ msgEl.textContent=data.error||"Failed, try again"; }
-}catch(e){ msgEl.textContent="Network error, try again"; }
-document.getElementById('btn').textContent="Activate Trial Now";
-document.getElementById('btn').disabled=false;
-}
-</script>
+  <!-- FREE TRIAL -->
+  <section id="trial" class="max-w-[440px] mx-auto px-6 py-12">
+    <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6">
+      <h2 class="text-xl font-bold">Start Free 3 Days Trial</h2>
+      <input id="name" placeholder="Full Name" class="w-full p-3.5 rounded-lg border border-zinc-700 bg-[#1a1a1a] text-white mt-2">
+      <input id="phone" placeholder="10 Digit Mobile" maxlength="10" class="w-full p-3.5 rounded-lg border border-zinc-700 bg-[#1a1a1a] text-white mt-2">
+      <input id="tv" placeholder="TradingView Username" class="w-full p-3.5 rounded-lg border border-zinc-700 bg-[#1a1a1a] text-white mt-2">
+      <button id="btn" onclick="submitLead()" class="w-full p-3.5 rounded-lg bg-white text-black font-extrabold mt-4">Activate Trial Now</button>
+      <div id="msg" class="mt-3 text-sm"></div>
+    </div>
+  </section>
+
+  <div class="text-center px-6 py-6 text-[11px] text-zinc-500 max-w-3xl mx-auto">Disclaimer: Automated trading software. No profit guarantee. Trading involves risk. 7 Days FREE trial.</div>
+
+  <footer class="text-center py-8 bg-[#111] border-t border-zinc-800 text-[13px] text-zinc-500">
+    <div class="mb-3"><a href="/privacy-policy.html">Privacy</a> | <a href="/terms-and-conditions.html">Terms</a> | <a href="/refund-policy.html">Refund</a> | <a href="/contact-us.html">Contact</a></div>
+    <p>© 2026 GrowMoreAlgo</p>
+  </footer>
+
+  <script>
+    let lastSubmit=0;
+    async function submitLead(){
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const tv=document.getElementById('tv').value.trim();
+      const msgEl=document.getElementById('msg');
+      if(Date.now()-lastSubmit<10000){msgEl.textContent="Please wait 10 sec";return;}
+      if(!/^[6-9]\d{9}$/.test(phone)){msgEl.textContent="Enter valid mobile";return;}
+      lastSubmit=Date.now();
+      const btn=document.getElementById('btn');btn.textContent="Processing...";
+      try{
+        const res=await fetch('/api/save-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,phone,tradingview:tv})});
+        const data=await res.json();
+        if(data.success){msgEl.style.color="#00ff88";msgEl.textContent="✅ Trial activated!";}
+        else{msgEl.textContent=data.error||"Failed";}
+      }catch(e){msgEl.textContent="Network error";}
+      btn.textContent="Activate Trial Now";
+    }
+  </script>
+  <!-- Last edited: 2026-05-13 -->
 </body>
 </html>
