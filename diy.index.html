@@ -1,42 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GrowmoreAlgo - DIY Algo Kit</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;margin:0;padding:20px;display:flex;justify-content:center}
-.container{max-width:440px;width:100%}
-.card{background:#121212;border:1px solid #222;border-radius:12px;padding:24px;text-align:center}
-.price{font-size:32px;font-weight:800;margin:16px 0}
-button{width:100%;padding:16px;border-radius:8px;background:#fff;color:#000;font-weight:800;border:none;cursor:pointer;font-size:16px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-Coder to EA Expert - Full Access</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'Inter',system-ui,sans-serif;background:#0a0a0a;color:#fff;margin:0;display:flex;justify-content:center;min-height:100vh}
+    .container{max-width:440px;width:92%;padding:28px 16px}
+    .card{background:#121212;border:1px solid #222;border-radius:18px;padding:22px;margin-bottom:16px}
+    .btn{width:100%;padding:15px;background:#fff;color:#000;border:none;border-radius:12px;font-weight:800;font-size:15px;margin-top:20px;cursor:pointer}
+  </style>
 </head>
 <body>
-<div class="container">
-<div class="card">
-<h1>DIY Algo Trading Kit</h1>
-<p>Build & Deploy Your Own Algos</p>
-<div class="price">₹1,999</div>
-<button onclick="payNow('diy_kit')">Buy DIY Kit - Secure</button>
-</div>
-</div>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script>
-function payNow(product){
- const options={
-  key: "rzp_live_YOUR_KEY_HERE",
-  amount: 199900,
-  currency: "INR",
-  name: "GrowmoreAlgo",
-  description: product,
-  handler: function(response){
-    window.location.href = "/success.html?txn="+response.razorpay_payment_id+"&product="+product;
-  },
-  theme:{color:"#ffffff"}
- };
- const rzp=new Razorpay(options); rzp.open();
-}
-</script>
+  <div class="container">
+    <h1>Non-Coder to EA Expert</h1>
+    <p>Full DIY Kit + PRO Indicator. No coding needed.</p>
+
+    <div class="card" id="step1">
+      <label>Full Name (Same as MT5)</label>
+      <input id="name" placeholder="Ex: John Smith">
+      <label>WhatsApp Number</label>
+      <input id="whatsapp" placeholder="Ex: +91 98765 43210">
+      <input type="hidden" id="country" value="India">
+      <button class="btn" id="submitBtn" onclick="handleSubmit()">Get Full Access →</button>
+    </div>
+
+    <div class="card" id="step2" style="display:none">
+      <h2>Welcome, <span id="uname"></span>!</h2>
+      <a id="payBtn" href="https://rzp.io/rzp/e4Gi712J" target="_blank">Continue to Secure Payment →</a>
+      <button class="btn" onclick="goToVerify()">I Have Completed Payment →</button>
+    </div>
+
+    <div class="card" id="step3" style="display:none">
+      <h2>Verify Payment</h2>
+      <select id="payMethod"><option>Razorpay</option><option>PayPal</option></select>
+      <input id="txn" placeholder="Transaction ID">
+      <input id="tg2" placeholder="Telegram Username">
+      <button class="btn" onclick="verifyPayment()">Verify & Unlock Access →</button>
+      <div id="finalBox" style="display:none">
+        <a href="https://t.me/+Nj9RRZFA65c0ZTA1" target="_blank">Join Private Channel</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let realCountryCode=null;
+    let currentName="", currentPhone="";
+    fetch('https://ipapi.co/json/').then(r=>r.json()).then(d=>{realCountryCode=d.country_code;}).catch(()=>{});
+    async function handleSubmit(){
+      const n=document.getElementById('name').value.trim();
+      const w=document.getElementById('whatsapp').value.trim();
+      currentName=n; currentPhone=w;
+      document.getElementById('uname').innerText=n;
+      document.getElementById('step1').style.display='none';
+      document.getElementById('step2').style.display='block';
+      const payBtn=document.getElementById('payBtn');
+      if(realCountryCode && realCountryCode!=='IN'){
+        payBtn.href="https://www.paypal.com/ncp/payment/QWYC...";
+      } else {
+        payBtn.href="https://rzp.io/rzp/e4Gi712J";
+      }
+    }
+    function goToVerify(){document.getElementById('step2').style.display='none';document.getElementById('step3').style.display='block';}
+    async function verifyPayment(){
+      document.getElementById('finalBox').style.display='block';
+    }
+  </script>
+  <!-- Last edited: 2026-05-13 - Price hidden, 3-step flow kept -->
 </body>
 </html>
