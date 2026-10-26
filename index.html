@@ -1,84 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrowmoreAlgo - Algo Solutions & Free Trial</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff}
-  </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4GK7STGCFV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4GK7STGCFV');</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growmore Algo - Your Smart Servant Trades. You Rest.</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  .dash-card{font-family:'Inter',sans-serif;background:#151515;border:1px solid #262626;border-radius:20px;max-width:420px;width:100%;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+  .dash-badge{display:inline-block;background:#1f2937;color:#a1a1aa;font-size:10px;letter-spacing:1.2px;padding:6px 10px;border-radius:20px;margin-bottom:14px}
+  .dash-card h3{font-size:28px;font-weight:800;margin-bottom:8px;color:#fff}
+  .dash-card h3 span{color:#facc15}
+  .dash-sub{color:#a1a1aa;font-size:13px;line-height:1.5;margin-bottom:20px}
+  .dash-label{font-size:11px;color:#a1a1aa;letter-spacing:1px;margin-bottom:8px;display:block}
+  .dash-input{width:100%;background:#0a0a0a;border:1px solid #2a2a2a;border-radius:10px;padding:14px;color:#fff;font-size:15px;outline:none;margin-bottom:16px}
+  .dash-input:focus{border-color:#facc15}
+  .dash-btn{width:100%;background:#facc15;color:#000;font-weight:800;font-size:14px;padding:14px;border:none;border-radius:10px;cursor:pointer;display:block;text-align:center;text-decoration:none;transition:0.2s}
+  .dash-btn:hover{background:#fde047}
+  .dash-btn2{width:100%;background:#0a0a0a;color:#facc15;border:1px solid #facc15;font-weight:800;font-size:14px;padding:14px;border-radius:10px;cursor:pointer;display:block;text-align:center;text-decoration:none;margin-top:10px}
+  .dash-success{display:none;background:#052e16;border:1px solid #14532d;color:#86efac;padding:12px;border-radius:10px;font-size:13px;margin-top:14px;text-align:center}
+  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;padding:16px}
+  .modal.show{display:flex}
+  .modal-box{background:#151515;border:1px solid #2a2a2a;border-radius:20px;max-width:400px;width:100%;padding:24px;position:relative}
+  .modal-close{position:absolute;top:12px;right:14px;background:#262626;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff}
+  .step{display:flex;gap:12px;margin-top:14px;text-align:left}
+  .step-no{background:#facc15;color:#000;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+  .step-text{font-size:13px;color:#d4d4d8;line-height:1.5}
+  .step-text b{color:#fff}
+</style>
 </head>
-<body>
-  <!-- NAV -->
-  <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="font-extrabold text-xl">GrowmoreAlgo</div>
-    <a href="#trial" class="bg-white text-black px-4 py-2 rounded-lg font-bold text-sm">Free Trial</a>
-  </nav>
-
-  <!-- HERO -->
-  <section class="max-w-6xl mx-auto px-6 py-16 text-center">
-    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Your Smart Servant Trades.<br><span class="text-zinc-400">You Rest.</span></h1>
-    <p class="text-zinc-400 mt-6 max-w-2xl mx-auto">We build automated trading systems for TradingView, MT5 & more.</p>
-    <div class="mt-8 flex gap-4 justify-center">
-      <a href="#trial" class="bg-white text-black px-6 py-3 rounded-lg font-bold">Start Free Trial</a>
-      <a href="https://wa.me/917738272732" target="_blank" class="border border-zinc-700 px-6 py-3 rounded-lg font-semibold">WhatsApp Us</a>
+<body class="bg-[#0a0a0a] text-white antialiased">
+<nav class="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto border-b border-zinc-900 sticky top-0 bg-[#0a0a0a]/90 backdrop-blur z-50">
+  <div class="flex items-center gap-3">
+    <img src="./logo-dark.jpg" class="w-10 h-10 rounded-full bg-white object-cover p-1">
+    <div><div class="font-extrabold">Growmore Algo</div><div class="text-[10px] text-gray-500 uppercase tracking-widest">Solutions</div></div>
+  </div>
+  <a href="https://wa.me/917738272732" class="bg-[#5ee484] text-black px-5 py-2 rounded-full font-bold text-sm">WhatsApp</a>
+</nav>
+<section class="max-w-6xl mx-auto px-6 py-14 text-center">
+  <img src="./logo-dark.jpg" class="w-24 h-24 mx-auto rounded-2xl mb-6 border border-zinc-800 bg-white object-cover p-2">
+  <h1 class="text-4xl md:text-[60px] font-extrabold leading-[0.9] tracking-tight">Your Smart Servant<br><span class="text-[#5ee484]">Trades.</span><br>You Rest.</h1>
+  <p class="mt-5 text-gray-400 max-w-2xl mx-auto text-sm">Trading Robots (EAs) + Indicators • Self-Evolving Logic • MT5 ↔ TradingView • AI Lab (R&D)</p>
+  <div class="mt-6 inline-flex bg-[#5ee484]/10 border border-[#5ee484]/30 px-5 py-2 rounded-full text-xs font-bold"><span class="text-[#5ee484]">⭐ Rent My Trading Robots (EAs) @ ₹2500/mo - SUREGOLD - 7 Days FREE</span></div>
+</section>
+<section class="max-w-6xl mx-auto px-6 pb-14">
+  <div class="flex justify-center">
+    <div class="dash-card">
+      <div class="dash-badge">DASHBOARD23 • PREMIUM EDITION</div>
+      <h3>Dashboard<span>23</span></h3>
+      <p class="dash-sub">Professional trading dashboard for MT5. Step 1: Create license, Step 2: Download dashboard.</p>
+      <label class="dash-label">STEP 1 - YOUR MT5 ACCOUNT FULL NAME</label>
+      <input type="text" id="userName" class="dash-input" placeholder="Ex: John Smith" autocomplete="off">
+      <button class="dash-btn" onclick="generateLicense()">STEP 1: GENERATE LICENSE FILE</button>
+      <div id="successBox" class="dash-success">✅ License Downloaded! Now do Step 2</div>
+      <div id="downloadWrap" style="display:none;">
+        <label class="dash-label" style="margin-top:16px;color:#facc15;">STEP 2 - DOWNLOAD DASHBOARD</label>
+        <a id="downloadBtn" href="./Downloads/DASHBOARD23.ex5" download class="dash-btn2" onclick="showSteps()">⬇️ STEP 2: DOWNLOAD DASHBOARD23.EX5</a>
+      </div>
+      <div class="mt-4 bg-[#0f0f0f] border border-dashed border-zinc-700 rounded-xl p-3 text-[11px] text-zinc-400 leading-relaxed">
+        <b class="text-white">How to Use:</b><br>
+        1. Enter MT5 name & generate license<br>
+        2. Download dashboard file<br>
+        3. License.txt → <b style="color:#facc15;">MQL5/Files/</b><br>
+        4. DASHBOARD23.ex5 → <b style="color:#5ee484;">MQL5/Experts/</b><br>
+        5. Restart MT5 & attach to chart
+      </div>
     </div>
-  </section>
-
-  <!-- 6 SERVICES -->
-  <section class="max-w-6xl mx-auto px-6 py-12">
-    <h2 class="text-2xl font-bold mb-8 text-center">Our 6 Core Services</h2>
-    <div class="grid md:grid-cols-3 gap-4">
-      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">1. Algo Development</h3><p class="text-sm text-zinc-400 mt-2">Custom strategies as per your logic</p></div>
-      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">2. TradingView Automation</h3><p class="text-sm text-zinc-400 mt-2">Fully automated alerts to broker</p></div>
-      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">3. MT5 EA & Indicators</h3><p class="text-sm text-zinc-400 mt-2">Expert Advisors, license system</p></div>
-      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">4. Dashboard23 Rental</h3><p class="text-sm text-zinc-400 mt-2">Premium dashboard with weekend skip</p></div>
-      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">5. Strategy Backtesting</h3><p class="text-sm text-zinc-400 mt-2">Deep backtest & optimization</p></div>
-      <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6"><h3 class="font-bold">6. Broker Integration</h3><p class="text-sm text-zinc-400 mt-2">Zerodha, Angel, Dhan auto execution</p></div>
-    </div>
-  </section>
-
-  <!-- FREE TRIAL -->
-  <section id="trial" class="max-w-[440px] mx-auto px-6 py-12">
-    <div class="bg-[#121212] border border-zinc-800 rounded-xl p-6">
-      <h2 class="text-xl font-bold">Start Free 3 Days Trial</h2>
-      <input id="name" placeholder="Full Name" class="w-full p-3.5 rounded-lg border border-zinc-700 bg-[#1a1a1a] text-white mt-2">
-      <input id="phone" placeholder="10 Digit Mobile" maxlength="10" class="w-full p-3.5 rounded-lg border border-zinc-700 bg-[#1a1a1a] text-white mt-2">
-      <input id="tv" placeholder="TradingView Username" class="w-full p-3.5 rounded-lg border border-zinc-700 bg-[#1a1a1a] text-white mt-2">
-      <button id="btn" onclick="submitLead()" class="w-full p-3.5 rounded-lg bg-white text-black font-extrabold mt-4">Activate Trial Now</button>
-      <div id="msg" class="mt-3 text-sm"></div>
-    </div>
-  </section>
-
-  <div class="text-center px-6 py-6 text-[11px] text-zinc-500 max-w-3xl mx-auto">Disclaimer: Automated trading software. No profit guarantee. Trading involves risk. 7 Days FREE trial.</div>
-
-  <footer class="text-center py-8 bg-[#111] border-t border-zinc-800 text-[13px] text-zinc-500">
-    <div class="mb-3"><a href="/privacy-policy.html">Privacy</a> | <a href="/terms-and-conditions.html">Terms</a> | <a href="/refund-policy.html">Refund</a> | <a href="/contact-us.html">Contact</a></div>
-    <p>© 2026 GrowMoreAlgo</p>
-  </footer>
-
-  <script>
-    let lastSubmit=0;
-    async function submitLead(){
-      const name=document.getElementById('name').value.trim();
-      const phone=document.getElementById('phone').value.trim();
-      const tv=document.getElementById('tv').value.trim();
-      const msgEl=document.getElementById('msg');
-      if(Date.now()-lastSubmit<10000){msgEl.textContent="Please wait 10 sec";return;}
-      if(!/^[6-9]\d{9}$/.test(phone)){msgEl.textContent="Enter valid mobile";return;}
-      lastSubmit=Date.now();
-      const btn=document.getElementById('btn');btn.textContent="Processing...";
-      try{
-        const res=await fetch('/api/save-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,phone,tradingview:tv})});
-        const data=await res.json();
-        if(data.success){msgEl.style.color="#00ff88";msgEl.textContent="✅ Trial activated!";}
-        else{msgEl.textContent=data.error||"Failed";}
-      }catch(e){msgEl.textContent="Network error";}
-      btn.textContent="Activate Trial Now";
-    }
-  </script>
-  <!-- Last edited: 2026-05-13 -->
+  </div>
+</section>
+<section class="max-w-6xl mx-auto px-6 pb-12">
+  <h2 class="text-2xl font-bold text-center">Our 6 Services</h2>
+  <div class="grid md:grid-cols-3 gap-5 mt-8">
+    <div class="bg-[#151515] p-6 rounded-[20px] border border-zinc-800"><div class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-sm">🛠️</div><div class="mt-4 font-bold text-sm">1. Custom Trading Robot (EA) Building</div><div class="text-xs text-[#5ee484] font-bold mt-1">Starts ₹10,000</div><p class="text-xs text-gray-400 mt-2">Your strategy → Our Robot. MT5 / Pine. Trades while you rest.</p><a href="https://wa.me/917738272732?text=Custom%20Robot%20Rs10000" class="block mt-4 bg-zinc-800 text-center py-2.5 rounded-full text-xs font-bold">Build My Robot →</a></div>
+    <div class="bg-[#151515] p-6 rounded-[20px] border border-zinc-800"><div class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-sm">⚡</div><div class="mt-4 font-bold text-sm">2. Robot (EA) Fixer</div><div class="text-xs text-[#5ee484] font-bold mt-1">Starts ₹800 • 24H</div><p class="text-xs text-gray-400 mt-2">Broken robot? We fix bugs + upgrade logic in 24H.</p><a href="https://wa.me/917738272732?text=Fix%20Robot%20Rs800" class="block mt-4 bg-zinc-800 text-center py-2.5 rounded-full text-xs font-bold">Fix My Robot →</a></div>
+    <div class="bg-[#5ee484] p-[2px] rounded-[20px]"><div class="bg-[#5ee484] p-6 rounded-[18px] text-black h-full"><div class="flex justify-between items-start"><div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center text-sm">👑</div><span class="bg-black text-[#5ee484] text-[10px] px-2 py-1 rounded-full font-bold">MOST POPULAR</span></div><div class="mt-4 font-extrabold text-sm">3. Rent My Trading Robots (EAs)</div><div class="text-xs font-extrabold mt-1">₹2500/mo - SUREGOLD</div><p class="text-xs mt-2 leading-relaxed opacity-80">Your smart servant that trades. (AI Robots under R&D). 7 Days FREE, Pay Only If Useful.</p><a href="https://wa.me/917738272732?text=Rent%20SUREGOLD%20Robot%20Rs2500" class="block mt-4 bg-black text-white text-center py-3 rounded-full text-xs font-bold">Start FREE Trial →</a></div></div>
+    <div class="bg-[#151515] p-6 rounded-[20px] border border-zinc-800"><div class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-sm">📈</div><div class="mt-4 font-bold text-sm">4. Rent Indicators</div><div class="text-xs text-[#5ee484] font-bold mt-1">Starts ₹800/mo • 7 Days FREE</div><p class="text-xs text-gray-400 mt-2">Smart indicators that guide your servant.</p><a href="https://wa.me/917738272732?text=Rent%20Indicator%20Rs800" class="block mt-4 bg-zinc-800 text-center py-2.5 rounded-full text-xs font-bold">Start FREE Trial →</a></div>
+    <div class="bg-[#151515] p-6 rounded-[20px] border border-zinc-800"><div class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-sm">🎯</div><div class="mt-4 font-bold text-sm">5. Custom Indicator</div><div class="text-xs text-[#5ee484] font-bold mt-1">Starts ₹5,000</div><p class="text-xs text-gray-400 mt-2">MT5 / Pine - Any logic with alerts.</p><a href="https://wa.me/917738272732?text=Custom%20Indicator%20Rs5000" class="block mt-4 bg-zinc-800 text-center py-2.5 rounded-full text-xs font-bold">Build Indicator →</a></div>
+    <div class="bg-[#151515] p-6 rounded-[20px] border border-zinc-800"><div class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-sm">🔄</div><div class="mt-4 font-bold text-sm">6. MQL5 ↔ Pine Converter</div><div class="text-xs text-[#5ee484] font-bold mt-1">Starts ₹1,200</div><p class="text-xs text-gray-400 mt-2">Convert MT5 Robot to TradingView & vice versa.</p><a href="https://wa.me/917738272732?text=Converter%20Rs1200" class="block mt-4 bg-zinc-800 text-center py-2.5 rounded-full text-xs font-bold">Convert Now →</a></div>
+  </div>
+</section>
+<footer class="border-t border-zinc-900 py-6 text-center text-xs text-gray-600"><img src="./logo-dark.jpg" class="w-10 h-10 mx-auto rounded-full mb-2 bg-white p-1"><div>Growmore Algo Solutions | Your Smart Servant Trades. You Rest.</div><div class="mt-2 flex justify-center gap-4"><a href="./partner.html" class="underline">Partner</a><a href="./privacy-policy.html" class="underline">Privacy</a><a href="./contact-us.html" class="underline">Contact</a></div></footer>
+<div id="guideModal" class="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-close" onclick="document.getElementById('guideModal').classList.remove('show')">✕</div>
+    <h3 style="font-weight:800;font-size:18px;color:#fff;">📂 Correct Installation Path</h3>
+    <p style="font-size:12px;color:#a1a1aa;margin-top:6px;">If files are in wrong folder, EA will not work</p>
+    <div class="step"><div class="step-no">1</div><div class="step-text"><b>Open MT5 > File > Open Data Folder</b></div></div>
+    <div class="step"><div class="step-no">2</div><div class="step-text"><b>License.txt</b> → <span style="background:#0a0a0a;padding:4px 8px;border-radius:6px;color:#facc15;">MQL5 → Files</span></div></div>
+    <div class="step"><div class="step-no">3</div><div class="step-text"><b>DASHBOARD23.ex5</b> → <span style="background:#0a0a0a;padding:4px 8px;border-radius:6px;color:#5ee484;">MQL5 → Experts</span></div></div>
+    <div class="step"><div class="step-no">4</div><div class="step-text">Restart MT5, drag <b>DASHBOARD23 from Navigator > Experts</b> to chart</div></div>
+    <div style="margin-top:18px;background:#052e16;border:1px solid #14532d;padding:10px;border-radius:10px;font-size:11px;color:#86efac;text-align:center;">✅ Name must match MT5 account name<br>✅ License valid for 3 working days</div>
+    <a href="https://wa.me/917738272732?text=Dashboard%20Install%20Help" style="display:block;margin-top:14px;background:#5ee484;color:#000;text-align:center;padding:12px;border-radius:10px;font-weight:800;font-size:13px;text-decoration:none;">Need Help? WhatsApp Us →</a>
+  </div>
+</div>
+<script>
+function generateLicense(){
+  let name=document.getElementById('userName').value.trim();
+  if(name.length<3){alert('Please enter your full MT5 account name');return;}
+  let expiryDate=new Date();let added=0;
+  while(added<3){expiryDate.setDate(expiryDate.getDate()+1);let d=expiryDate.getDay();if(d!==0&&d!==6)added++;}
+  let dd=String(expiryDate.getDate()).padStart(2,'0');let mm=String(expiryDate.getMonth()+1).padStart(2,'0');let yyyy=expiryDate.getFullYear();
+  let expiryStr=`${dd}/${mm}/${yyyy}`;
+  let content=`Name=${name}\r\nExpiry=${expiryStr}\r\nProduct=Dashboard23\r\nVersion=2.3\r\n`;
+  let blob=new Blob([content],{type:'text/plain'});let url=URL.createObjectURL(blob);
+  let a=document.createElement('a');a.href=url;a.download='License.txt';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+  document.getElementById('successBox').style.display='block';
+  document.getElementById('downloadWrap').style.display='block';
+}
+function showSteps(){setTimeout(()=>{document.getElementById('guideModal').classList.add('show');},600);}
+function closeModal(e){if(e.target.id==='guideModal')e.target.classList.remove('show');}
+</script>
 </body>
 </html>
